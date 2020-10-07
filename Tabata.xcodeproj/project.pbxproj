@@ -10,11 +10,13 @@
 		1760545F251DEE1800FA4B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1760545E251DEE1800FA4B6D /* AppDelegate.swift */; };
 		17605461251DEE1800FA4B6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605460251DEE1800FA4B6D /* SceneDelegate.swift */; };
 		17605463251DEE1800FA4B6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605462251DEE1800FA4B6D /* ViewController.swift */; };
-		17605466251DEE1800FA4B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17605464251DEE1800FA4B6D /* Main.storyboard */; };
+		17605466251DEE1800FA4B6D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17605464251DEE1800FA4B6D /* Main.storyboard */; settings = {ASSET_TAGS = (1, ); }; };
 		17605468251DEE1A00FA4B6D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17605467251DEE1A00FA4B6D /* Assets.xcassets */; };
 		1760546B251DEE1A00FA4B6D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17605469251DEE1A00FA4B6D /* LaunchScreen.storyboard */; };
 		17605476251DEE1A00FA4B6D /* TabataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605475251DEE1A00FA4B6D /* TabataTests.swift */; };
 		17605481251DEE1A00FA4B6D /* TabataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605480251DEE1A00FA4B6D /* TabataUITests.swift */; };
+		1760548F252AE6CD00FA4B6D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1760548E252AE6CD00FA4B6D /* TimerViewController.swift */; };
+		17605491252AF6CF00FA4B6D /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605490252AF6CF00FA4B6D /* PlayViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		1760547C251DEE1A00FA4B6D /* TabataUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TabataUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17605480251DEE1A00FA4B6D /* TabataUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabataUITests.swift; sourceTree = "<group>"; };
 		17605482251DEE1A00FA4B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1760548E252AE6CD00FA4B6D /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		17605490252AF6CF00FA4B6D /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 				17605460251DEE1800FA4B6D /* SceneDelegate.swift */,
 				17605462251DEE1800FA4B6D /* ViewController.swift */,
 				17605464251DEE1800FA4B6D /* Main.storyboard */,
+				1760548E252AE6CD00FA4B6D /* TimerViewController.swift */,
+				17605490252AF6CF00FA4B6D /* PlayViewController.swift */,
 				17605467251DEE1A00FA4B6D /* Assets.xcassets */,
 				17605469251DEE1A00FA4B6D /* LaunchScreen.storyboard */,
 				1760546C251DEE1A00FA4B6D /* Info.plist */,
@@ -190,6 +196,9 @@
 		17605453251DEE1800FA4B6D /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					1,
+				);
 				LastSwiftUpdateCheck = 1170;
 				LastUpgradeCheck = 1170;
 				ORGANIZATIONNAME = "Takemura assan";
@@ -259,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1760548F252AE6CD00FA4B6D /* TimerViewController.swift in Sources */,
+				17605491252AF6CF00FA4B6D /* PlayViewController.swift in Sources */,
 				17605463251DEE1800FA4B6D /* ViewController.swift in Sources */,
 				1760545F251DEE1800FA4B6D /* AppDelegate.swift in Sources */,
 				17605461251DEE1800FA4B6D /* SceneDelegate.swift in Sources */,
