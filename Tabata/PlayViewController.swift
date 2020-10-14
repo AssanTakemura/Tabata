@@ -10,36 +10,52 @@ import UIKit
 
 class PlayViewController: UIViewController {
     
-    var time: [Int] = [6,30]
+    
+    //準備
+    var time1: [Int] = [20]
+    //運動
+    var time2: [Int] = [20]
+    //休憩
+    var time3: [Int] = [10]
     
     @IBOutlet var playLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        playLabel.text = String(time[0]) + ":" + String(time[1])
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer) , userInfo: nil, repeats: true)
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer1) , userInfo: nil, repeats: true)
+        
         // Do any additional setup after loading the view.
     }
     
-    @objc func timer(){
-        if (time[0] == 0 && time[1] == 0) {
+    @objc func timer1(){
+        if (time1[0] == 0) {
+            Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
+        } else {
+            time1[0] -= 1
+        }
+        playLabel.text = String(time1[0])
+    }
+    
+    @objc func timer2(){
+        if (time2[0] == 0) {
+            Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer3) , userInfo: nil, repeats: true)
+        } else {
+            time2[0] -= 1
+        }
+        playLabel.text = String(time2[0])
+    }
+    
+    @objc func timer3(){
+        if (time3[0] == 0) {
             playLabel.text = "終了"
         } else {
-            if time[1] > 0 {
-                //秒数が0以上の時秒数を-1
-                time[1] -= 1
-            } else {
-                //秒数が0の時
-                time[1] += 59
-                if time[0] > 0 {
-                    //分が0以上の時、分を-1
-                    time[0] -= 1
-                }
-            }
-            playLabel.text = String(time[0]) + ":" + String(time[1])
+            time3[0] -= 1
         }
+        playLabel.text = String(time3[0])
     }
+    
+    
     
     
     /*
