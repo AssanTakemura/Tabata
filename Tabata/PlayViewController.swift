@@ -10,27 +10,29 @@ import UIKit
 
 class PlayViewController: UIViewController {
     
-    
     //準備
     var time1: [Int] = [20]
     //運動
-    var time2: [Int] = [20]
+    var time2: [Int] = [21]
     //休憩
-    var time3: [Int] = [10]
+    var time3: [Int] = [11]
+    
+    var timer: Timer?
     
     @IBOutlet var playLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer1) , userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer1) , userInfo: nil, repeats: true)
         
         // Do any additional setup after loading the view.
     }
     
     @objc func timer1(){
         if (time1[0] == 0) {
-            Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
         } else {
             time1[0] -= 1
         }
@@ -39,7 +41,8 @@ class PlayViewController: UIViewController {
     
     @objc func timer2(){
         if (time2[0] == 0) {
-            Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer3) , userInfo: nil, repeats: true)
+            timer?.invalidate()
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer3) , userInfo: nil, repeats: true)
         } else {
             time2[0] -= 1
         }
