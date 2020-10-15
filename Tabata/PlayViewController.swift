@@ -51,6 +51,7 @@ class PlayViewController: UIViewController {
     
     @objc func timer3(){
         if (time3[0] == 0) {
+            timer?.invalidate()
             playLabel.text = "終了"
         } else {
             time3[0] -= 1
