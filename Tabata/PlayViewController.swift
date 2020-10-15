@@ -33,7 +33,7 @@ class PlayViewController: UIViewController {
     }
     
     @objc func timer1(){
-        if (time1[0] == 0) {
+        if (time1[0] == 0 && number <= 4) {
             timer?.invalidate()
             number = number + 1
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
@@ -45,7 +45,7 @@ class PlayViewController: UIViewController {
     }
     
     @objc func timer2(){
-        if (time2[0] == 0 && number <= 4) {
+        if (time2[0] == 0 || number <= 4) {
             timer?.invalidate()
             time2 = [21]
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer3) , userInfo: nil, repeats: true)
