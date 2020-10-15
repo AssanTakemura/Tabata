@@ -1,0 +1,6 @@
+framework module Pods_TabataTests {
+  umbrella header "Pods-TabataTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
