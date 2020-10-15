@@ -17,9 +17,12 @@ class PlayViewController: UIViewController {
     //休憩
     var time3: [Int] = [11]
     
+    var number : Int = 0
+    
     var timer: Timer?
     
     @IBOutlet var playLabel: UILabel!
+    @IBOutlet var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,9 +33,11 @@ class PlayViewController: UIViewController {
     }
     
     @objc func timer1(){
-        if (time1[0] == 0) {
+        if (time1[0] == 0 && number <= 4) {
             timer?.invalidate()
+            number = number + 1
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
+            nameLabel.text = "運動"
         } else {
             time1[0] -= 1
         }
@@ -40,9 +45,10 @@ class PlayViewController: UIViewController {
     }
     
     @objc func timer2(){
-        if (time2[0] == 0) {
+        if (time2[0] == 0 && number <= 4) {
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer3) , userInfo: nil, repeats: true)
+            nameLabel.text = "休憩"
         } else {
             time2[0] -= 1
         }
@@ -52,11 +58,16 @@ class PlayViewController: UIViewController {
     @objc func timer3(){
         if (time3[0] == 0) {
             timer?.invalidate()
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer1) , userInfo: nil, repeats: true)
+        } else if (number == 5) {
             playLabel.text = "終了"
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
+                let TimerViewController = self.storyboard?.instantiateViewController(withIdentifier: "first") as! TimerViewController
+                self.present(TimerViewController, animated: true, completion: nil)
+            }
         } else {
             time3[0] -= 1
         }
-        playLabel.text = String(time3[0])
     }
     
     
