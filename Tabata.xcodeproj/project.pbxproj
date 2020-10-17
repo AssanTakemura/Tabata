@@ -13,6 +13,12 @@
 		175744CA253A19A3005A430F /* timeup.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 175744C7253A19A2005A430F /* timeup.mp3 */; };
 		175744CB253A19A3005A430F /* timecount.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 175744C8253A19A2005A430F /* timecount.mp3 */; };
 		175744CD253A2234005A430F /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 175744CC253A2234005A430F /* Comment.swift */; };
+		175744CF253AAF1C005A430F /* FirebaseCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175744CE253AAF1C005A430F /* FirebaseCore.framework */; };
+		175744D1253AAF22005A430F /* FirebaseCoreDiagnostics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175744D0253AAF22005A430F /* FirebaseCoreDiagnostics.framework */; };
+		175744D3253AAF43005A430F /* FirebaseInstallations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175744D2253AAF43005A430F /* FirebaseInstallations.framework */; };
+		175744D7253AAF4D005A430F /* Pods_Tabata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175744D6253AAF4D005A430F /* Pods_Tabata.framework */; };
+		175744DB253AAF59005A430F /* GoogleDataTransport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175744DA253AAF59005A430F /* GoogleDataTransport.framework */; };
+		175744DD253AAF5E005A430F /* GoogleUtilities.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 175744DC253AAF5E005A430F /* GoogleUtilities.framework */; };
 		1760545F251DEE1800FA4B6D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1760545E251DEE1800FA4B6D /* AppDelegate.swift */; };
 		17605461251DEE1800FA4B6D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605460251DEE1800FA4B6D /* SceneDelegate.swift */; };
 		17605463251DEE1800FA4B6D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605462251DEE1800FA4B6D /* ViewController.swift */; };
@@ -52,6 +58,12 @@
 		175744C7253A19A2005A430F /* timeup.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timeup.mp3; sourceTree = "<group>"; };
 		175744C8253A19A2005A430F /* timecount.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = timecount.mp3; sourceTree = "<group>"; };
 		175744CC253A2234005A430F /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		175744CE253AAF1C005A430F /* FirebaseCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		175744D0253AAF22005A430F /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseCoreDiagnostics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		175744D2253AAF43005A430F /* FirebaseInstallations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = FirebaseInstallations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		175744D6253AAF4D005A430F /* Pods_Tabata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_Tabata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		175744DA253AAF59005A430F /* GoogleDataTransport.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleDataTransport.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		175744DC253AAF5E005A430F /* GoogleUtilities.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = GoogleUtilities.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1760545B251DEE1800FA4B6D /* Tabata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tabata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1760545E251DEE1800FA4B6D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17605460251DEE1800FA4B6D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +96,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				175744DD253AAF5E005A430F /* GoogleUtilities.framework in Frameworks */,
+				175744DB253AAF59005A430F /* GoogleDataTransport.framework in Frameworks */,
+				175744D7253AAF4D005A430F /* Pods_Tabata.framework in Frameworks */,
+				175744D3253AAF43005A430F /* FirebaseInstallations.framework in Frameworks */,
+				175744D1253AAF22005A430F /* FirebaseCoreDiagnostics.framework in Frameworks */,
+				175744CF253AAF1C005A430F /* FirebaseCore.framework in Frameworks */,
 				50C81324A91BC074034F5799 /* Pods_Tabata.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -110,6 +128,12 @@
 		0129E1150F6209B528720659 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				175744DC253AAF5E005A430F /* GoogleUtilities.framework */,
+				175744DA253AAF59005A430F /* GoogleDataTransport.framework */,
+				175744D6253AAF4D005A430F /* Pods_Tabata.framework */,
+				175744D2253AAF43005A430F /* FirebaseInstallations.framework */,
+				175744D0253AAF22005A430F /* FirebaseCoreDiagnostics.framework */,
+				175744CE253AAF1C005A430F /* FirebaseCore.framework */,
 				2958D6BCC1365C5002ED8ECD /* Pods_Tabata.framework */,
 				A2A0F11EE52E41B5CE5ECF04 /* Pods_Tabata_TabataUITests.framework */,
 				D3A175470F53CD64F2C4C72C /* Pods_TabataTests.framework */,

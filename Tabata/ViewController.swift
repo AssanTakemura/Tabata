@@ -8,8 +8,9 @@
 
 import UIKit
 import Firebase
+import FirebaseDatabase
 
-class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UITableViewDataSource, UITableViewDelegate {
     
     let idArray: [String] = ["first", "second"]
     
@@ -19,15 +20,17 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     @IBOutlet var selectTab: UISegmentedControl!
     
     @IBOutlet var tlTableView: UITableView!
+    
     var users: [User]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        tlTableView.dataSource = self
+        tlTableView.delegate = self
+        tlTableView.rowHeight = 100
         
         FirebaseApp.configure()
-        
-        tlTableView.dataSource = self
         
         for id in idArray {
             viewControllers.append((storyboard?.instantiateViewController(withIdentifier: id))!)
@@ -55,10 +58,10 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
                 
                 var user = User()
                 user.setFromDictionary(dictionarySnapData)
-
+                
                 self.users.append(user)
             }
-    
+            
             self.tlTableView.reloadData()
         }
     }
@@ -108,7 +111,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tlTableView.dequeueReusableCell(withIdentifier: "UserTableCell", for: indexPath)
+        let cell = tlTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let user = users[indexPath.row]
         

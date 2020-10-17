@@ -1,19 +1,28 @@
 # Uncomment the next line to define a global platform for your project
 platform :ios, '9.0'
 
+pod 'Firebase/Core'
+pod 'Firebase/Database'
+
+
 target 'Tabata' do
+  # Uncomment the next line if you're using Swift or would like to use dynamic frameworks
+  # use_frameworks!
+
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
   # Pods for Tabata
 
-# add the Firebase pod for Google Analytics
-pod 'Firebase/Analytics'
-# add pods for any other desired Firebase products
-# https://firebase.google.com/docs/ios/setup#available-pods
 
-# Uncomment this line if you're using Swift
-use_frameworks!
+ # Pods for MyAwesomeApp
+
+# Recommended: Add the Firebase pod for Google Analytics
+pod 'Firebase/Analytics'
+
+
+# Pods for firebasetest
+pod 'Firebase/Database'
 
   target 'TabataTests' do
     inherit! :search_paths

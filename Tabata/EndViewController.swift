@@ -8,7 +8,7 @@
 
 import UIKit
 import Firebase
-
+import FirebaseDatabase
 
 class EndViewController: UIViewController {
     
@@ -36,7 +36,8 @@ class EndViewController: UIViewController {
     
     @IBAction func touroku() {
         
-        let ref = Database.database().reference()
+        var ref: DatabaseReference!
+        ref = Database.database().reference()
         
         var newUser = User()
         newUser.name = nameText.text!

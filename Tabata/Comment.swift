@@ -10,12 +10,13 @@ import UIKit
 import Firebase
 
 struct User {
+    
     var name: String = ""
-    var tore: String = "トレーニングしたよ！"
+    var tore: String = ""
     
     mutating func setFromDictionary(_ dictionary: [String: Any]) {
         name = dictionary["name"] as? String ?? ""
-        tore = dictionary["tore"] as? String ?? "トレーニングしたよ！"
+        tore = dictionary["tore"] as? String ?? ""
     }
     
     var toDictionary: [String: Any] {
