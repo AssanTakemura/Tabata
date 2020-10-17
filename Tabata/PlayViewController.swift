@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class PlayViewController: UIViewController {
     
@@ -17,12 +18,15 @@ class PlayViewController: UIViewController {
     //休憩
     var time3: [Int] = [11]
     
-    var number : Int = 0
+    var number : Int = 1
     
     var timer: Timer?
     
+    var audioPlayer:AVAudioPlayer!
+    
     @IBOutlet var playLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
+    @IBOutlet var numLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +39,6 @@ class PlayViewController: UIViewController {
     @objc func timer1(){
         if (time1[0] == 0 && number <= 4) {
             timer?.invalidate()
-            number = number + 1
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
             nameLabel.text = "運動"
         } else {
@@ -45,33 +48,54 @@ class PlayViewController: UIViewController {
     }
     
     @objc func timer2(){
-        if (time2[0] == 0 || number <= 4) {
+        
+        numLabel.text = String(number)
+        
+        if (time2[0] == 0 && number <= 4) {
             timer?.invalidate()
-            time2 = [21]
+            number = number + 1
+            time3 = [11]
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer3) , userInfo: nil, repeats: true)
             nameLabel.text = "休憩"
         } else {
             time2[0] -= 1
         }
+        
         playLabel.text = String(time2[0])
+        
+        if (time2[0] <= 3){
+            playLabel.textColor = UIColor.red
+        } else {
+            playLabel.textColor = UIColor.black
+        }
     }
     
     @objc func timer3(){
-        if (time3[0] == 0) {
-            timer?.invalidate()
-            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer1) , userInfo: nil, repeats: true)
-        } else if (number == 5) {
+        if (time3[0] == 0 && number == 5) {
             playLabel.text = "終了"
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                let TimerViewController = self.storyboard?.instantiateViewController(withIdentifier: "first") as! TimerViewController
-                self.present(TimerViewController, animated: true, completion: nil)
+                let EndViewController = self.storyboard?.instantiateViewController(withIdentifier: "secound") as! EndViewController
+                self.present(EndViewController, animated: true, completion: nil)
             }
+        }else if (time3[0] == 0) {
+            playLabel.text = String(time3[0])
+            timer?.invalidate()
+            time2 = [21]
+            timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
+            nameLabel.text = "運動"
         } else {
             time3[0] -= 1
+            playLabel.text = String(time3[0])
         }
         
-        time3 = [11]
+        if (time3[0] <= 3){
+            playLabel.textColor = UIColor.red
+        } else {
+            playLabel.textColor = UIColor.black
+        }
+        
     }
+    
     
     
     

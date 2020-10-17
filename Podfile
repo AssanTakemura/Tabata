@@ -12,6 +12,9 @@ pod 'Firebase/Analytics'
 # add pods for any other desired Firebase products
 # https://firebase.google.com/docs/ios/setup#available-pods
 
+# Uncomment this line if you're using Swift
+use_frameworks!
+
   target 'TabataTests' do
     inherit! :search_paths
     # Pods for testing
