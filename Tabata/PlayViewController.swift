@@ -40,6 +40,7 @@ class PlayViewController: UIViewController {
         if (time1[0] == 0 && number <= 4) {
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
+            self.view.backgroundColor = UIColor(red: 255, green: 105, blue: 180, alpha: 1.0)
             nameLabel.text = "運動"
         } else {
             time1[0] -= 1
@@ -56,6 +57,7 @@ class PlayViewController: UIViewController {
             number = number + 1
             time3 = [11]
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer3) , userInfo: nil, repeats: true)
+            self.view.backgroundColor = UIColor(red: 0, green: 128, blue: 255, alpha: 1.0)
             nameLabel.text = "休憩"
         } else {
             time2[0] -= 1
@@ -72,6 +74,7 @@ class PlayViewController: UIViewController {
     
     @objc func timer3(){
         if (time3[0] == 0 && number == 5) {
+            self.view.backgroundColor = UIColor(red: 151, green: 114, blue: 210, alpha: 1.0)
             playLabel.text = "終了"
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 let EndViewController = self.storyboard?.instantiateViewController(withIdentifier: "secound") as! EndViewController
@@ -82,6 +85,7 @@ class PlayViewController: UIViewController {
             timer?.invalidate()
             time2 = [21]
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
+            self.view.backgroundColor = UIColor(red: 255, green: 105, blue: 180, alpha: 1.0)
             nameLabel.text = "運動"
         } else {
             time3[0] -= 1

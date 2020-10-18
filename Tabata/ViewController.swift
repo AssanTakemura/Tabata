@@ -20,7 +20,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     @IBOutlet var selectTab: UISegmentedControl!
     
     @IBOutlet var tlTableView: UITableView!
-    
+
     var users: [User]!
     
     override func viewDidLoad() {
