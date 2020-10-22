@@ -7,10 +7,8 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseDatabase
 
-class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageViewControllerDelegate{
     
     let idArray: [String] = ["first", "second"]
     
@@ -19,19 +17,9 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
     
     @IBOutlet var selectTab: UISegmentedControl!
     
-    @IBOutlet var tlTableView: UITableView!
-
-    var users: [User]!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
-        tlTableView.dataSource = self
-        tlTableView.delegate = self
-        tlTableView.rowHeight = 100
-        
-        FirebaseApp.configure()
         
         for id in idArray {
             viewControllers.append((storyboard?.instantiateViewController(withIdentifier: id))!)
@@ -42,33 +30,6 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         pageViewController.dataSource = self
         pageViewController.delegate = self
         
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        let ref = Database.database().reference()
-        
-        ref.child("Users").observe(.value) { (snapshot) in
-            
-            self.users = []
-            
-            for data in snapshot.children {
-                let snapData = data as! DataSnapshot
-                let dictionarySnapData = snapData.value as! [String: Any]
-                
-                var user = User()
-                user.setFromDictionary(dictionarySnapData)
-                
-                self.users.append(user)
-            }
-            
-            self.tlTableView.reloadData()
-        }
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
@@ -105,30 +66,7 @@ class ViewController: UIViewController, UIPageViewControllerDataSource, UIPageVi
         }
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let _users = users else { return 0 }
-        return _users.count
-    }
-    
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tlTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        let user = users[indexPath.row]
-        
-        let nameLabel = cell.viewWithTag(1) as! UILabel
-        nameLabel.text = user.name
-        
-        let toreLabel = cell.viewWithTag(2) as! UILabel
-        toreLabel.text = user.tore
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath as IndexPath, animated: true)
-    }
-    
+
     
 }
 

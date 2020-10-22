@@ -32,6 +32,7 @@ class EndViewController: UIViewController {
         
         nameText.text = user.name
         toreText.text = user.tore
+        
     }
     
     @IBAction func touroku() {

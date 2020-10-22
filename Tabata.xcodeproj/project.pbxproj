@@ -29,6 +29,7 @@
 		17605481251DEE1A00FA4B6D /* TabataUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605480251DEE1A00FA4B6D /* TabataUITests.swift */; };
 		1760548F252AE6CD00FA4B6D /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1760548E252AE6CD00FA4B6D /* TimerViewController.swift */; };
 		17605491252AF6CF00FA4B6D /* PlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17605490252AF6CF00FA4B6D /* PlayViewController.swift */; };
+		17BED16A253BE2C500578B52 /* TlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BED169253BE2C500578B52 /* TlViewController.swift */; };
 		4C97C141FAE3E0A5E4CE9F45 /* Pods_Tabata_TabataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A0F11EE52E41B5CE5ECF04 /* Pods_Tabata_TabataUITests.framework */; };
 		50C81324A91BC074034F5799 /* Pods_Tabata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2958D6BCC1365C5002ED8ECD /* Pods_Tabata.framework */; };
 		9FE9DD14409B7ABC03847BFF /* Pods_TabataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A175470F53CD64F2C4C72C /* Pods_TabataTests.framework */; };
@@ -80,6 +81,7 @@
 		17605482251DEE1A00FA4B6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1760548E252AE6CD00FA4B6D /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		17605490252AF6CF00FA4B6D /* PlayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayViewController.swift; sourceTree = "<group>"; };
+		17BED169253BE2C500578B52 /* TlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TlViewController.swift; sourceTree = "<group>"; };
 		2958D6BCC1365C5002ED8ECD /* Pods_Tabata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tabata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		335DD8DE67F8E0A3DDAAF27D /* Pods-Tabata-TabataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabata-TabataUITests.release.xcconfig"; path = "Target Support Files/Pods-Tabata-TabataUITests/Pods-Tabata-TabataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		76DCE5A513D7E4A40A600A93 /* Pods-Tabata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabata.release.xcconfig"; path = "Target Support Files/Pods-Tabata/Pods-Tabata.release.xcconfig"; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				1760548E252AE6CD00FA4B6D /* TimerViewController.swift */,
 				17605490252AF6CF00FA4B6D /* PlayViewController.swift */,
 				175744C32539A414005A430F /* EndViewController.swift */,
+				17BED169253BE2C500578B52 /* TlViewController.swift */,
 				175744CC253A2234005A430F /* Comment.swift */,
 				17605467251DEE1A00FA4B6D /* Assets.xcassets */,
 				17605469251DEE1A00FA4B6D /* LaunchScreen.storyboard */,
@@ -470,6 +473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17BED16A253BE2C500578B52 /* TlViewController.swift in Sources */,
 				175744C42539A414005A430F /* EndViewController.swift in Sources */,
 				1760548F252AE6CD00FA4B6D /* TimerViewController.swift in Sources */,
 				17605491252AF6CF00FA4B6D /* PlayViewController.swift in Sources */,
@@ -651,14 +655,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = M53G2X4922;
 				INFOPLIST_FILE = Tabata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tabatan.TabatanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -672,14 +676,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1.0.0;
+				CURRENT_PROJECT_VERSION = 1.0.1;
 				DEVELOPMENT_TEAM = M53G2X4922;
 				INFOPLIST_FILE = Tabata/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.tabatan.TabatanApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
