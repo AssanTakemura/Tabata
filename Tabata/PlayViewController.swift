@@ -12,7 +12,7 @@ import AVFoundation
 class PlayViewController: UIViewController {
     
     //準備
-    var time1: [Int] = [20]
+    var time1: [Int] = [21]
     //運動
     var time2: [Int] = [21]
     //休憩
@@ -77,8 +77,9 @@ class PlayViewController: UIViewController {
             self.view.backgroundColor = UIColor(red: 151, green: 114, blue: 210, alpha: 1.0)
             playLabel.text = "終了"
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
-                let EndViewController = self.storyboard?.instantiateViewController(withIdentifier: "secound") as! EndViewController
-                self.present(EndViewController, animated: true, completion: nil)
+                //                let EndViewController = self.storyboard?.instantiateViewController(withIdentifier: "second") as! EndViewController
+                //                self.present(EndViewController, animated: true, completion: nil)
+                self.performSegue(withIdentifier: "tosecond",sender: nil)
             }
         }else if (time3[0] == 0) {
             playLabel.text = String(time3[0])
@@ -100,6 +101,12 @@ class PlayViewController: UIViewController {
         
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "tosecond" {
+            let nextView = segue.destination as! EndViewController
+        }
+    }
     
     
     

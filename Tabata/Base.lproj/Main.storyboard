@@ -59,8 +59,7 @@
         <!--Tl View Controller-->
         <scene sceneID="IAM-gJ-oFc">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GGN-co-Agz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <viewController storyboardIdentifier="second" useStoryboardIdentifierAsRestorationIdentifier="YES" id="It2-ao-YqQ" customClass="TlViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="second" useStoryboardIdentifierAsRestorationIdentifier="YES" id="It2-ao-YqQ" customClass="TlViewController" customModule="Tabata" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rQ2-cG-s1F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -123,6 +122,7 @@
                         <outlet property="tlTableView" destination="aMC-LY-Wew" id="yL0-9x-Smn"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GGN-co-Agz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2985.507246376812" y="545.75892857142856"/>
         </scene>
@@ -135,13 +135,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6分30秒" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vg1-fF-UGl">
-                                <rect key="frame" x="166" y="213" width="78" height="24"/>
+                                <rect key="frame" x="168" y="213" width="78" height="24"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EAJ-uC-xhQ">
-                                <rect key="frame" x="21" y="262" width="368" height="120"/>
+                                <rect key="frame" x="21" y="262" width="372" height="120"/>
                                 <color key="backgroundColor" red="1" green="0.85440839850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="AIQ-Hb-YwH"/>
@@ -156,7 +156,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rAc-y7-SZm">
-                                <rect key="frame" x="21" y="516" width="368" height="120"/>
+                                <rect key="frame" x="21" y="516" width="372" height="62"/>
                                 <color key="backgroundColor" red="1" green="0.85440839850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="2F1-zU-HpY"/>
@@ -173,7 +173,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOO-D6-KYq">
-                                <rect key="frame" x="21" y="643" width="368" height="34"/>
+                                <rect key="frame" x="21" y="585" width="372" height="120"/>
                                 <color key="backgroundColor" red="1" green="0.85440839850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="374" id="W97-A2-uAx"/>
@@ -188,7 +188,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soM-TB-b8d">
-                                <rect key="frame" x="115" y="694" width="180" height="60"/>
+                                <rect key="frame" x="115" y="722" width="184" height="60"/>
                                 <color key="backgroundColor" red="0.73279644690000001" green="0.85440839850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="WjB-pd-SUn"/>
@@ -203,7 +203,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVb-lT-OrU">
-                                <rect key="frame" x="21" y="389" width="368" height="120"/>
+                                <rect key="frame" x="21" y="389" width="372" height="120"/>
                                 <color key="backgroundColor" red="1" green="0.85440839850000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="374" id="4ae-6e-Men"/>
@@ -333,6 +333,7 @@
                         <outlet property="nameLabel" destination="7rC-c0-Aeo" id="3OK-44-aDU"/>
                         <outlet property="numLabel" destination="e49-8B-Od8" id="3aS-9T-WHD"/>
                         <outlet property="playLabel" destination="HYx-Jo-Qx1" id="p9N-gw-ANl"/>
+                        <segue destination="MKy-xK-uBg" kind="show" identifier="tosecond" id="Bo9-5a-JtH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rlA-gh-hYg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -342,7 +343,7 @@
         <!--End View Controller-->
         <scene sceneID="f3s-oV-OoM">
             <objects>
-                <viewController storyboardIdentifier="secound" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MKy-xK-uBg" customClass="EndViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="MKy-xK-uBg" customClass="EndViewController" customModule="Tabata" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BdY-JU-0Nf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -396,6 +397,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ssO-Na-ECY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="B6x-pJ-k0j"/>
                     <connections>
                         <outlet property="nameText" destination="7Qd-dR-89L" id="PJk-3U-Drf"/>
                         <outlet property="toreText" destination="5Mh-id-dbK" id="cJH-gI-hLe"/>

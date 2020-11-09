@@ -17,12 +17,16 @@ class EndViewController: UIViewController {
     
     var user: User!
     var key: String!
-    
+    var users: [User]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         FirebaseApp.configure()
+        
+        datebase()
+        
+        print(users)
     }
     
     // Do any additional setup after loading the view.
@@ -30,8 +34,8 @@ class EndViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        nameText.text = user.name
-        toreText.text = user.tore
+        nameText.text = users[0].name
+        toreText.text = users[0].tore
         
     }
     
@@ -49,6 +53,28 @@ class EndViewController: UIViewController {
         let TimerViewController = self.storyboard?.instantiateViewController(withIdentifier: "first") as! TimerViewController
         self.present(TimerViewController, animated: true, completion: nil)
         
+        
+    }
+    
+    func datebase(){
+        
+        let ref = Database.database().reference()
+        
+        ref.child("Users").observe(.value) { (snapshot) in
+            
+            self.users = []
+            
+            for data in snapshot.children {
+                let snapData = data as! DataSnapshot
+                let dictionarySnapData = snapData.value as! [String: Any]
+                
+                var user = User()
+                user.setFromDictionary(dictionarySnapData)
+                
+                self.users.append(user)
+            }
+            
+        }
     }
     
     /*

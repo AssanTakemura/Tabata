@@ -48,6 +48,7 @@ class TlViewController: UIViewController, UITableViewDataSource, UITableViewDele
             
             self.tlTableView.reloadData()
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
