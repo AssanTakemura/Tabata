@@ -20,6 +20,8 @@ target 'Tabata' do
 # Recommended: Add the Firebase pod for Google Analytics
 pod 'Firebase/Analytics'
 
+pod 'Firebase/Auth'
+
 
 # Pods for firebasetest
 pod 'Firebase/Database'

@@ -9,6 +9,8 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseAuth
+
 
 class EndViewController: UIViewController {
     
@@ -21,23 +23,28 @@ class EndViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //        print(FirebaseApp.app())
+        //        if FirebaseApp.app() == nil {
+        //                   FirebaseApp.configure()
+        //
+        //        }else{
+        //     FirebaseApp.configure()
+        //
+        //    }
         
-        FirebaseApp.configure()
         
-        datebase()
-        
-        print(users)
+        //        datebase()
     }
     
     // Do any additional setup after loading the view.
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        nameText.text = users[0].name
-        toreText.text = users[0].tore
-        
-    }
+    //    override func viewWillAppear(_ animated: Bool) {
+    //        super.viewWillAppear(animated)
+    //
+    ///              nameText.text = users[0].name
+    //            toreText.text = users[0].tore
+    //
+    //    }
     
     @IBAction func touroku() {
         
@@ -56,26 +63,6 @@ class EndViewController: UIViewController {
         
     }
     
-    func datebase(){
-        
-        let ref = Database.database().reference()
-        
-        ref.child("Users").observe(.value) { (snapshot) in
-            
-            self.users = []
-            
-            for data in snapshot.children {
-                let snapData = data as! DataSnapshot
-                let dictionarySnapData = snapData.value as! [String: Any]
-                
-                var user = User()
-                user.setFromDictionary(dictionarySnapData)
-                
-                self.users.append(user)
-            }
-            
-        }
-    }
     
     /*
      // MARK: - Navigation

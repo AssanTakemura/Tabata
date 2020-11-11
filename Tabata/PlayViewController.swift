@@ -12,11 +12,11 @@ import AVFoundation
 class PlayViewController: UIViewController {
     
     //準備
-    var time1: [Int] = [21]
+    var time1: [Int] = [2]
     //運動
-    var time2: [Int] = [21]
+    var time2: [Int] = [2]
     //休憩
-    var time3: [Int] = [11]
+    var time3: [Int] = [1]
     
     var number : Int = 1
     
@@ -41,7 +41,7 @@ class PlayViewController: UIViewController {
             timer?.invalidate()
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
             self.view.backgroundColor = UIColor(red: 255, green: 105, blue: 180, alpha: 1.0)
-            nameLabel.text = "運動"
+            nameLabel.text = "🔥運動🔥"
         } else {
             time1[0] -= 1
         }
@@ -55,10 +55,10 @@ class PlayViewController: UIViewController {
         if (time2[0] == 0 && number <= 4) {
             timer?.invalidate()
             number = number + 1
-            time3 = [11]
+            time3 = [1]
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer3) , userInfo: nil, repeats: true)
             self.view.backgroundColor = UIColor(red: 0, green: 128, blue: 255, alpha: 1.0)
-            nameLabel.text = "休憩"
+            nameLabel.text = "😪休憩😪"
         } else {
             time2[0] -= 1
         }
@@ -75,7 +75,8 @@ class PlayViewController: UIViewController {
     @objc func timer3(){
         if (time3[0] == 0 && number == 5) {
             self.view.backgroundColor = UIColor(red: 151, green: 114, blue: 210, alpha: 1.0)
-            playLabel.text = "終了"
+            nameLabel.text = ""
+            playLabel.text = "🙆‍終了🙆‍"
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
                 //                let EndViewController = self.storyboard?.instantiateViewController(withIdentifier: "second") as! EndViewController
                 //                self.present(EndViewController, animated: true, completion: nil)
@@ -84,10 +85,10 @@ class PlayViewController: UIViewController {
         }else if (time3[0] == 0) {
             playLabel.text = String(time3[0])
             timer?.invalidate()
-            time2 = [21]
+            time2 = [2]
             timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector:#selector(timer2) , userInfo: nil, repeats: true)
             self.view.backgroundColor = UIColor(red: 255, green: 105, blue: 180, alpha: 1.0)
-            nameLabel.text = "運動"
+            nameLabel.text = "🔥運動🔥"
         } else {
             time3[0] -= 1
             playLabel.text = String(time3[0])
