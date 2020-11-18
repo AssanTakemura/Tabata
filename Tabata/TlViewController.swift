@@ -13,7 +13,7 @@ import FirebaseDatabase
 class TlViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet var tlTableView: UITableView!
-
+    
     var users: [User]!
     
     override func viewDidLoad() {
@@ -22,7 +22,9 @@ class TlViewController: UIViewController, UITableViewDataSource, UITableViewDele
         tlTableView.dataSource = self
         tlTableView.delegate = self
         
-        FirebaseApp.configure()
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
         
         // Do any additional setup after loading the view.
     }

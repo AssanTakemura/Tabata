@@ -32,6 +32,13 @@
 		17BED16A253BE2C500578B52 /* TlViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BED169253BE2C500578B52 /* TlViewController.swift */; };
 		17BED16C255BEB2F00578B52 /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BED16B255BEB2F00578B52 /* PopupViewController.swift */; };
 		17BED16E255BECEB00578B52 /* pop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BED16D255BECEB00578B52 /* pop.jpg */; };
+		17BED1772562B19300578B52 /* paper01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BED1702562B19300578B52 /* paper01.jpg */; };
+		17BED1782562B19300578B52 /* paper03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BED1712562B19300578B52 /* paper03.jpg */; };
+		17BED1792562B19300578B52 /* paper02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BED1722562B19300578B52 /* paper02.jpg */; };
+		17BED17A2562B19300578B52 /* paper06.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BED1732562B19300578B52 /* paper06.jpg */; };
+		17BED17B2562B19300578B52 /* paper07.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BED1742562B19300578B52 /* paper07.jpg */; };
+		17BED17C2562B19300578B52 /* paper05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BED1752562B19300578B52 /* paper05.jpg */; };
+		17BED17D2562B19300578B52 /* paper04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 17BED1762562B19300578B52 /* paper04.jpg */; };
 		4C97C141FAE3E0A5E4CE9F45 /* Pods_Tabata_TabataUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A2A0F11EE52E41B5CE5ECF04 /* Pods_Tabata_TabataUITests.framework */; };
 		50C81324A91BC074034F5799 /* Pods_Tabata.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2958D6BCC1365C5002ED8ECD /* Pods_Tabata.framework */; };
 		9FE9DD14409B7ABC03847BFF /* Pods_TabataTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3A175470F53CD64F2C4C72C /* Pods_TabataTests.framework */; };
@@ -86,6 +93,13 @@
 		17BED169253BE2C500578B52 /* TlViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TlViewController.swift; sourceTree = "<group>"; };
 		17BED16B255BEB2F00578B52 /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		17BED16D255BECEB00578B52 /* pop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = pop.jpg; sourceTree = "<group>"; };
+		17BED1702562B19300578B52 /* paper01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper01.jpg; sourceTree = "<group>"; };
+		17BED1712562B19300578B52 /* paper03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper03.jpg; sourceTree = "<group>"; };
+		17BED1722562B19300578B52 /* paper02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper02.jpg; sourceTree = "<group>"; };
+		17BED1732562B19300578B52 /* paper06.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper06.jpg; sourceTree = "<group>"; };
+		17BED1742562B19300578B52 /* paper07.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper07.jpg; sourceTree = "<group>"; };
+		17BED1752562B19300578B52 /* paper05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper05.jpg; sourceTree = "<group>"; };
+		17BED1762562B19300578B52 /* paper04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = paper04.jpg; sourceTree = "<group>"; };
 		2958D6BCC1365C5002ED8ECD /* Pods_Tabata.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tabata.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		335DD8DE67F8E0A3DDAAF27D /* Pods-Tabata-TabataUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabata-TabataUITests.release.xcconfig"; path = "Target Support Files/Pods-Tabata-TabataUITests/Pods-Tabata-TabataUITests.release.xcconfig"; sourceTree = "<group>"; };
 		76DCE5A513D7E4A40A600A93 /* Pods-Tabata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tabata.release.xcconfig"; path = "Target Support Files/Pods-Tabata/Pods-Tabata.release.xcconfig"; sourceTree = "<group>"; };
@@ -197,6 +211,7 @@
 				1760546C251DEE1A00FA4B6D /* Info.plist */,
 				175744C125382554005A430F /* GoogleService-Info.plist */,
 				17BED16D255BECEB00578B52 /* pop.jpg */,
+				17BED16F2562B19300578B52 /* paper-bg-set */,
 				175744C5253A19A2005A430F /* music */,
 			);
 			path = Tabata;
@@ -218,6 +233,20 @@
 				17605482251DEE1A00FA4B6D /* Info.plist */,
 			);
 			path = TabataUITests;
+			sourceTree = "<group>";
+		};
+		17BED16F2562B19300578B52 /* paper-bg-set */ = {
+			isa = PBXGroup;
+			children = (
+				17BED1702562B19300578B52 /* paper01.jpg */,
+				17BED1712562B19300578B52 /* paper03.jpg */,
+				17BED1722562B19300578B52 /* paper02.jpg */,
+				17BED1732562B19300578B52 /* paper06.jpg */,
+				17BED1742562B19300578B52 /* paper07.jpg */,
+				17BED1752562B19300578B52 /* paper05.jpg */,
+				17BED1762562B19300578B52 /* paper04.jpg */,
+			);
+			path = "paper-bg-set";
 			sourceTree = "<group>";
 		};
 		2D030DBF0B84892A6B9EDD6A /* Pods */ = {
@@ -347,12 +376,19 @@
 			files = (
 				1760546B251DEE1A00FA4B6D /* LaunchScreen.storyboard in Resources */,
 				175744C225382554005A430F /* GoogleService-Info.plist in Resources */,
+				17BED17D2562B19300578B52 /* paper04.jpg in Resources */,
+				17BED1772562B19300578B52 /* paper01.jpg in Resources */,
 				175744CA253A19A3005A430F /* timeup.mp3 in Resources */,
 				17605468251DEE1A00FA4B6D /* Assets.xcassets in Resources */,
 				17605466251DEE1800FA4B6D /* Main.storyboard in Resources */,
 				17BED16E255BECEB00578B52 /* pop.jpg in Resources */,
+				17BED1792562B19300578B52 /* paper02.jpg in Resources */,
 				175744CB253A19A3005A430F /* timecount.mp3 in Resources */,
+				17BED1782562B19300578B52 /* paper03.jpg in Resources */,
+				17BED17C2562B19300578B52 /* paper05.jpg in Resources */,
 				175744C9253A19A3005A430F /* sirei.mp3 in Resources */,
+				17BED17A2562B19300578B52 /* paper06.jpg in Resources */,
+				17BED17B2562B19300578B52 /* paper07.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

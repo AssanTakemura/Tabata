@@ -23,29 +23,12 @@ class EndViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //        print(FirebaseApp.app())
-        //        if FirebaseApp.app() == nil {
-        //                   FirebaseApp.configure()
-        //
-        //        }else{
-        //     FirebaseApp.configure()
-        //
-        //    }
-        
-        
-        //        datebase()
+        if FirebaseApp.app() == nil {
+            FirebaseApp.configure()
+        }
     }
     
-    // Do any additional setup after loading the view.
-    
-    //    override func viewWillAppear(_ animated: Bool) {
-    //        super.viewWillAppear(animated)
-    //
-    ///              nameText.text = users[0].name
-    //            toreText.text = users[0].tore
-    //
-    //    }
-    
+  
     @IBAction func touroku() {
         
         var ref: DatabaseReference!
